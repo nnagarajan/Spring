@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="factoryMethod" class="com.springaction.factorymethod.FactoryMethod"
+          factory-method="getInstance"></bean>
+
+    <bean name="factoryBean" class="com.springaction.factorymethod.FactoryBean"
+          factory-method="createFactoryBean"></bean>
+    <bean name="myInteger" factory-bean="factoryBean" factory-method="createInteger"></bean>
+    <bean name="myDouble" factory-bean="factoryBean" factory-method="createDouble"></bean>
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="wirealist" class="com.springaction.collections.WireAList">
+        <property name="listCollection">
+            <list>
+                <value>dummy1</value>
+                <value>dummy2</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean name="wireamap" class="com.springaction.collections.WireAMap">
+        <property name="map">
+            <map>
+                <entry key="1" value="value1"></entry>
+                <entry key="2" value="value2"></entry>
+            </map>
+        </property>
+
+    </bean>
+
+    <bean name="wireaprop" class="com.springaction.collections.WireAProp">
+        <property name="properties">
+            <props>
+                <prop key="key1">value 1</prop>
+                <prop key="key2">value 2</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
